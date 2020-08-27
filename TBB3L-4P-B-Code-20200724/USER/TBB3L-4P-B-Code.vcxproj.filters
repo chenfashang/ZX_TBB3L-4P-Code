@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CORE">
+      <UniqueIdentifier>{CE27837C-BA5E-840D-634B-6A104F61000F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FWLib">
+      <UniqueIdentifier>{99B9220D-05CE-4ABE-CE4F-EE1D3A2347EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HARDWARE">
+      <UniqueIdentifier>{73F0063E-5FBD-6149-88D6-4FF1740297D7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="README">
+      <UniqueIdentifier>{33732BCC-1F15-56A2-08D0-69F6F410DDF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SYSTEM">
+      <UniqueIdentifier>{CAA7F4CF-B649-1FA6-9F04-33FA8B45A6F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="USER">
+      <UniqueIdentifier>{04168D7C-F04C-8E0D-9939-7410854F0A0F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CORE\core_cm3.c">
+      <Filter>CORE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CORE\startup_stm32f10x_hd.s">
+      <Filter>CORE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HARDWARE\KEY\key.c">
+      <Filter>HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HARDWARE\LCD\lcd.c">
+      <Filter>HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HARDWARE\LEAK_TEST\LeakTest.c">
+      <Filter>HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HARDWARE\LED\led.c">
+      <Filter>HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HARDWARE\RS485\rs485.c">
+      <Filter>HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\STM32F10x_FWLib\src\misc.c">
+      <Filter>FWLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_fsmc.c">
+      <Filter>FWLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_gpio.c">
+      <Filter>FWLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_rcc.c">
+      <Filter>FWLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_usart.c">
+      <Filter>FWLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SYSTEM\delay\delay.c">
+      <Filter>SYSTEM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SYSTEM\sys\sys.c">
+      <Filter>SYSTEM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SYSTEM\usart\usart.c">
+      <Filter>SYSTEM</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>USER</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f10x_it.c">
+      <Filter>USER</Filter>
+    </ClCompile>
+    <ClCompile Include="system_stm32f10x.c">
+      <Filter>USER</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.TXT">
+      <Filter>README</Filter>
+    </None>
+  </ItemGroup>
+</Project>

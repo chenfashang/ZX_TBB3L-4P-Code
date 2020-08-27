@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="RS485|Win32">
+      <Configuration>RS485</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6404A19A-D08F-0E5F-D9A0-915345AB6A5F}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TBB3L-4P-B-Code</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RS485|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RS485|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RS485|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\RS485\</OutDir>
+    <IntDir>obj\</IntDir>
+    <TargetName>TBB3L-4P-B-Code</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <IncludePath>$(VC_IncludePath);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RS485|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>STM32F10X_HD;USE_STDPERIPH_DRIVER;_IAR_;__ICCARM__;__CC_ARM;_Pragma(x)=;__interrupt=;__packed=__attribute__((__packed__));__weak=__attribute__((weak));%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;.;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\KEY;..\HARDWARE\LCD;..\HARDWARE\RTC;..\HARDWARE\WKUP;..\HARDWARE\ADC;..\HARDWARE\DAC;..\HARDWARE\DMA;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\SPI;..\HARDWARE\FLASH;..\HARDWARE\TOUCH;..\HARDWARE\RS485;..\HARDWARE\LEAK_TEST;C:\Keil_v5\ARM\RV31;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CORE\core_cm3.c" />
+    <ClCompile Include="..\CORE\startup_stm32f10x_hd.s" />
+    <ClCompile Include="..\HARDWARE\KEY\key.c" />
+    <ClCompile Include="..\HARDWARE\LCD\lcd.c" />
+    <ClCompile Include="..\HARDWARE\LEAK_TEST\LeakTest.c" />
+    <ClCompile Include="..\HARDWARE\LED\led.c" />
+    <ClCompile Include="..\HARDWARE\RS485\rs485.c" />
+    <ClCompile Include="..\STM32F10x_FWLib\src\misc.c" />
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_fsmc.c" />
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_gpio.c" />
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_rcc.c" />
+    <ClCompile Include="..\STM32F10x_FWLib\src\stm32f10x_usart.c" />
+    <ClCompile Include="..\SYSTEM\delay\delay.c" />
+    <ClCompile Include="..\SYSTEM\sys\sys.c" />
+    <ClCompile Include="..\SYSTEM\usart\usart.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="stm32f10x_it.c" />
+    <ClCompile Include="system_stm32f10x.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.TXT" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
